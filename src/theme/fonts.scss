@@ -1,0 +1,15 @@
+@font-face{
+  font-family: 'Product Sans';
+  src: url('/src/assets/fonts/Product-Sans-Regular.ttf');
+}
+.ProductSans{
+  font-family: 'Product Sans'!important;
+}
+
+@font-face{
+  font-family: 'Product Sans Bold';
+  src: url('/src/assets/fonts/Product-Sans-Bold.ttf');
+}
+.ProductSans-Bold{
+  font-family: 'Product Sans Bold'!important;
+}

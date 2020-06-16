@@ -1,17 +1,104 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
+  
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" id="body">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <div class="ProductSans">
+      <div id="imagen" class="container">
+        <div id="textos">
+          <h3 id="textosImagen">CinemApp</h3>
+          <p id="textosImagen"> Agenda tus entradas en cualquier momento</p> 
+        </div>
+      </div>
+
+  <div >
+    <ion-button expand="block"  id="bocao" (click)="bocao()" style="--color:black; --background: white">
+      <ion-icon id="icons" slot="start" src="./../../assets/icon/palomitas.svg"></ion-icon>
+        <ion-label>Agrega un bocao</ion-label>
+      </ion-button>
+  </div>
+
+   <!-- <ion-row>
+    <ion-col id="bebidas">
+
+    </ion-col>
+    <ion-col id="picadera">
+
+    </ion-col>
+  </ion-row> -->
+  <div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-4 col-sm-8" id="bebidas">
+      <div class="container justify-content-center">
+        <div id="agrega-aperitivo" class="text-center">
+          <ion-fab  vertical="bottom" horizontal="center">
+            <ion-fab-button color="primary">
+              <ion-icon name="add"></ion-icon>
+            </ion-fab-button>
+            <h4 id="aperitivos">Bebidas</h4>
+          </ion-fab>
+              
+        </div>
+      </div>
+     
+    </div>
+    <div class="col-md-6 col-md-4 col-sm-8" id=picadera>
+      <div class="container justify-content-center">
+        <div id="agrega-aperitivo" class="text-center">
+          <ion-fab  vertical="bottom" horizontal="center">
+            <ion-fab-button color="primary">
+              <ion-icon name="add"></ion-icon>
+            </ion-fab-button>
+            <h4 id="aperitivos">Picaderas</h4>
+          </ion-fab>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <div class="" style="margin-top: 20px;" >
+      <ion-button expand="block" id="tickets">
+        <ion-icon id="icons" slot="start" src="./../../assets/icon/003-tickets.svg"></ion-icon>
+        <ion-col>
+            <ion-row>
+              <p style="margin-top: 15px;">Avengers End-Game</p>
+            </ion-row>
+            <ion-row>
+              <p style="font-size:x-small; margin-top: -10px;">4:00 P.M. - 7:00 P.M.</p>
+            </ion-row>
+          </ion-col>
+      </ion-button>
+
+        <ion-button expand="block" id="tickets" style="margin-top: 8px; margin-bottom: 8px;" (click)="taquillas()">
+          <ion-icon id="icons" slot="start" src="./../../assets/icon/003-tickets.svg"></ion-icon>
+          <ion-col>
+              <ion-row>
+                <p style="margin-top: 15px;">Avengers End-Game</p>
+              </ion-row>
+              <ion-row>
+                <p style="font-size:x-small; margin-top: -10px;">4:00 P.M. - 7:00 P.M.</p>
+              </ion-row>
+            </ion-col>
+        </ion-button>
+          
+
+        <ion-button expand="block" id="tickets">
+          <ion-icon id="icons" slot="start" src="./../../assets/icon/003-tickets.svg"></ion-icon>
+          <ion-col>
+              <ion-row>
+                <p style="margin-top: 15px;">Avengers End-Game</p>
+              </ion-row>
+              <ion-row>
+                <p style="font-size:x-small; margin-top: -10px;">4:00 P.M. - 7:00 P.M.</p>
+              </ion-row>
+            </ion-col>
+        </ion-button>
+    </div>
+</div>
+
+
+
+  </ion-content>

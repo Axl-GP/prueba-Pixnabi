@@ -1,0 +1,89 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-toolbar id="toolbar">
+        <ion-icon name="arrow-back-outline" color="primary" size="large" (click)="volver()" ></ion-icon>
+      </ion-toolbar>
+    </ion-row>
+    <ion-row >
+      <ion-col size="12">
+        <div id="pelicula" class="container">
+          <div id=textos>
+            <h3 id="textosImagen">CinemApp</h3>
+            <p id="textosImagen"> Agenda tus entradas en cualquier momento</p> 
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row style="margin-top:20px">
+      <ion-col size="12">
+        <ion-item>  
+          <ion-select [(ngModel)]="NoTickets" (ionChange)="setTickets($event)" name="NoTickets" interface="popover"slot="end">No. de tickets
+            <ion-select-option fill="full" *ngFor="let item of cantidadTickets" >{{item}}</ion-select-option>             
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row style="margin-top: 30px;">
+      <ion-col size="8">
+        <h2 id="detalles" >Detalles de la orden:</h2>
+      </ion-col>
+    </ion-row>
+    <ion-infinite-scroll>
+      <ion-infinite-scroll-content loading-spinner="null">
+          <ion-row>
+            <ion-col size="9">
+              <h2 id="detallesSecundario">Tickets para Avengers End-Game</h2>
+            </ion-col>
+            <ng-container *ngIf="calcularTickets()">
+              <ion-col size="3">
+                <h2 color="primary" id="coste">$: {{calcularTickets()}}</h2>
+              </ion-col>
+            </ng-container>
+          </ion-row>
+  
+          <ion-row *ngFor="let item of ordenes">
+            <ion-col size="9">
+              <h2 id="detallesSecundario">{{item.titulo}}</h2>
+            </ion-col>
+            <ion-col size="3">
+              <h2 id="coste">$: {{item.total}}</h2>
+            </ion-col>
+          </ion-row>
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+      
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>  
+          <ion-select [(ngModel)]="tipo"  (ionChange)="setMetodoPago($event)" name="tipo" interface="popover"slot="end" style="width: 100%;">Método de pago
+            <ion-select-option fill="full" *ngFor="let item of tipoPago" >{{item}}</ion-select-option>             
+          </ion-select>
+        </ion-item>
+      </ion-col>
+        <ion-item>
+          <ion-col size="3">
+            <ion-title color="primary" id="coste">$: {{getMetodoPago()}}</ion-title>
+          </ion-col>
+        </ion-item>
+    </ion-row>
+  <ng-container *ngIf="calcularPrecios()" >
+    <ion-row>
+      <ion-col>
+        <h1 id="costeTotal">$: {{calcularPrecios()}} DOP.</h1>
+      </ion-col> 
+    </ion-row>
+  </ng-container>
+  
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="primary" (click)="cancelarVenta()"> Cancelar tickets
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-content>
+  
+  

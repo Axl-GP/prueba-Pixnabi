@@ -1,0 +1,57 @@
+   <ion-content>
+      <ion-row>
+        <ion-col size="12">
+          <div class="container d-flex justify-content-center">
+            <ion-icon id=cinema src="/./../assets/icon/029-cinema.svg"></ion-icon>
+          </div>
+         </ion-col>
+      </ion-row>
+      <ion-row style="margin-top: 5%;">
+        <ion-col size="12">
+          <div class="container d-flex text-center">
+            <ion-title color="primary">CinemApp</ion-title>
+          </div>
+        </ion-col>
+      </ion-row>
+      <form [formGroup]="form">
+        <ion-row style="margin-top: 10%;">
+          <ion-col size="11">
+            <ion-item>
+            <ion-label position="stacked" color="primary">Nombre y apellido</ion-label>
+            <ion-input required="true" type="text" formControlName="nombreCompleto" placeholder="Pedro Sosa" ></ion-input>
+          </ion-item>
+          </ion-col>
+        </ion-row>
+      <ion-row>
+        <ion-col size="11">
+          <ion-item>
+          <ion-label position="stacked" color="primary">Correo electrónico</ion-label>
+          <ion-input required="true" type="email" formControlName="email" placeholder="someone@example.com"></ion-input>
+        </ion-item>
+        </ion-col>
+      </ion-row>
+
+    <ion-row>
+      <ion-col size="11">
+        <ion-item>
+        <ion-label position="stacked" color="primary">Contraseña</ion-label>
+        <ion-input required="true" type="password" formControlName="clave" placeholder="••••••••••••••••••••••••"></ion-input>
+      </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" style="margin-top:10%;">
+          <ion-button expand="block" color="primary" [disabled]="!form.valid" (click)="registrarse()">Registrarme</ion-button>
+      </ion-col> 
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" style="margin-top: 30%;">
+          <ion-button expand="block" fill="clear" (click)="iniciarSesion()" style="--color:#c00a09;">¿Ya tienes cuenta?, inicia sesión</ion-button>
+      </ion-col> 
+    </ion-row>
+
+    
+      </form>
+    </ion-content>
+  
+  

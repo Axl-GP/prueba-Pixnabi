@@ -1,0 +1,76 @@
+<div class="container ProductSans">
+  <ion-button slot="end" fill="clear" id="titulo" (click)="cerrarModal()">Cerrar</ion-button>
+
+
+    <div class="" >
+      <ion-toolbar>
+        <ion-icon src="assets/icon/palomitas.svg" slot="start" id="palomitas"></ion-icon>
+        <ion-title style="margin-left: -40px;" id="titulo">Agrega un bocao</ion-title>
+      </ion-toolbar>
+  </div>
+  
+<ion-grid>
+  
+   <form>
+
+    <ion-row>
+      <ion-col size="5">
+                <ion-item>  
+                  <ion-select [(ngModel)]="titulo" (ionChange)="capturarTitulo($event)" name="titulo" interface="popover"slot="end" style="width: 100%;" >
+                    <ion-select-option fill="full" value="Hot dog">Hot dog</ion-select-option>
+                    <ion-select-option value="Combo doble">Combo doble</ion-select-option>
+                    <ion-select-option value="Nachos con queso">Nachos con queso</ion-select-option>                  
+                  </ion-select>
+                </ion-item>
+       </ion-col>
+      <ion-col size="4">
+        <ion-item>  
+          <ion-select [(ngModel)]="cantidad" (ionChange)="capturarCantidad($event)" name="cantidad" interface="popover" >
+            
+            <ion-select-option value="1">1</ion-select-option>
+            <ion-select-option value="2">2</ion-select-option>
+            <ion-select-option value="3">3</ion-select-option>
+            <ion-select-option value="4">4</ion-select-option> 
+            
+          </ion-select>
+        </ion-item>
+     </ion-col>
+     <ion-col size="3">
+      <ion-button (click)="ordenComida()" slots="icon-only" shape="rectangle" style="--border-radius:15px;" >
+        <ion-icon name="add"></ion-icon>
+      </ion-button>  
+     </ion-col>
+    </ion-row>
+  </form>
+
+    <ion-row *ngFor="let item of ordenes; let i=index">
+      
+      <ion-col size="9">
+        <ion-button expand="block" id="tickets">
+          <ion-icon id="icons" slot="start" src="./../../assets/icon/003-tickets.svg"></ion-icon>
+          <ion-col>
+              <ion-row>
+                <p style="margin-top: 15px;">{{item.titulo}}</p>
+              </ion-row>
+              <ion-row>
+                <p style="font-size:x-small; margin-top: -10px;">$ {{item.total}} DOP.</p>
+              </ion-row>
+            </ion-col>
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="eliminarOrden(i)" slots="icon-only" shape="rectangle" style="--border-radius:15px;" >
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" (click)="confirmarOrden()" id="tickets" color="primary" style="position: bottom;">Confirmar orden
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
+</div>

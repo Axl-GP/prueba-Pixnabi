@@ -1,0 +1,48 @@
+#pelicula{
+    background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('../../../assets/images/hipertextual-ver-avengers-endgame-4k-2019810743.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding-top: 140px;
+    height: 240px;
+    width: 350px;
+    z-index: 0;   
+}
+#textosImagen{
+    
+    z-index: 1;
+    margin-top: -10px;
+    color: white;
+    
+    
+}
+#textos{
+    margin-top: 20px;
+}
+
+#toolbar{
+    z-index: 1;
+    
+}
+#detalles{
+    color:#c00a09;
+    
+}
+#detallesSecundario{
+    color:#989aa2;
+    text-align: left;
+    
+    
+     
+}
+#coste{
+    color:#c00a09;  
+}
+#costeTotal{
+    color:#c00a09;  
+    text-align: center;
+    font-weight: bold;
+
+}

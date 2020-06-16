@@ -1,0 +1,92 @@
+
+#imagen{
+    background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('../../assets/images/kilyan-sockalingum-nW1n9eNHOsc-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding-top: 140px;
+    height: 240px;
+    width: 350px;
+    margin-left: 12px;
+    margin-top: 8px;
+    z-index: 0;   
+}
+#textosImagen{
+    
+    z-index: 1;
+    margin-top: -10px;
+    color: white;
+    
+    
+}
+#textos{
+    margin-top: 20px;
+}
+
+#icons{
+    width: 30px;
+    height: 30px;
+    
+}
+#comida{
+    padding: 15px;
+    column-gap: normal;
+    
+}
+
+#bebidas{
+    background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('../../assets/images/eiliv-sonas-aceron-iyqj9IKpQK0-unsplash.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-color:rgba($color: #000000, $alpha: 1.0);
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left:12px;
+    height: 260px;
+    width: 170px;
+    z-index: 0;
+    
+
+}
+#picadera{
+
+    background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('../../assets/images/charles-deluvio-PvAAYZx-yf8-unsplash.jpg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-right: 12px;
+    border-radius: 10px;
+    height: 260px;
+    width: 170px;
+    z-index: 0;
+    
+}
+#tickets{
+    --color:white;
+    --background: #c00a09;
+}
+
+#aperitivos{
+    color: white;
+    
+    
+}
+#agrega-aperitivo{
+    
+}
+.taquillas .modal-wrapper {
+   
+ }
+
+ .bocao .modal-wrapper {
+    position:absolute; 
+    top:43%; 
+    border-top-left-radius:50px;
+    border-top-right-radius:50px
+ }
+

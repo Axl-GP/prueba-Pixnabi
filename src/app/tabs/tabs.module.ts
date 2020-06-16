@@ -1,3 +1,5 @@
+import { AuthPage } from './../Sign/auth/auth.page';
+import { RegistroPage } from './../Sign/registro/registro.page';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';

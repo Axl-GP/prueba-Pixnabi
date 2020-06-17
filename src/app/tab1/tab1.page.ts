@@ -46,7 +46,7 @@ export class Tab1Page {
       const myModal = await this.modalCtrl.create({
         component: TaquillasComponent,
         cssClass: 'taquillas',
-      });console.log(this.taquilla);
+      });
       return await myModal.present();
     }
 }

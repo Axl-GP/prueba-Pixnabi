@@ -18,15 +18,6 @@
         <ion-label>Agrega un bocao</ion-label>
       </ion-button>
   </div>
-
-   <!-- <ion-row>
-    <ion-col id="bebidas">
-
-    </ion-col>
-    <ion-col id="picadera">
-
-    </ion-col>
-  </ion-row> -->
   <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-4 col-sm-8" id="bebidas">
@@ -60,7 +51,7 @@
 </div>
 
     <div class="" style="margin-top: 20px;" >
-      <ion-button expand="block" id="tickets">
+      <ion-button expand="block" id="tickets" (click)="taquillas()">
         <ion-icon id="icons" slot="start" src="./../../assets/icon/003-tickets.svg"></ion-icon>
         <ion-col>
             <ion-row>
@@ -85,7 +76,7 @@
         </ion-button>
           
 
-        <ion-button expand="block" id="tickets">
+        <ion-button expand="block" id="tickets" (click)="taquillas()">
           <ion-icon id="icons" slot="start" src="./../../assets/icon/003-tickets.svg"></ion-icon>
           <ion-col>
               <ion-row>

@@ -25,12 +25,10 @@ export class Tab2Page {
      //Add 'implements OnInit' to the class.
      this.itemRef = this.db.object('usuarios/'+this.service.getUsuario()+'/compras/');
      this.itemRef.snapshotChanges().subscribe(action => {
-     console.log(action.payload.val())
      let data = action.payload.val()
      this.object=[];
          
            for(let k in  data){
-           console.log(k);
            data[k].key = k ;
            
            this.object.push(data[k])

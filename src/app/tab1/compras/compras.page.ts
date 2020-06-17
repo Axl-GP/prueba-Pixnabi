@@ -24,7 +24,7 @@ export class ComprasPage implements OnInit {
 }
 
 ngOnInit() {
- console.log(this.ordenes);
+ 
  this.ordenes=this.service.getOrden();
 
  

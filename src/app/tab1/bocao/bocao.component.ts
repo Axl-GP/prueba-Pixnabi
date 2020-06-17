@@ -21,20 +21,20 @@ export class BocaoComponent implements OnInit {
   constructor(private builder:FormBuilder, private service:DatosService, private ctrl:ModalController) { }
 
   ngOnInit() {
-    console.log(this.ordenes);
+    
    
   }
 
       capturarTitulo(titulo){
-        //this.pick.titulo=titulo.detail.value;
+        
         this.titulo=titulo.detail.value;
-        console.log(this.titulo);
+        
 
       }
       capturarCantidad(cantidad){
-        //this.pick.cantidad=cantidad.detail.value;
+        
         this.cantidad=cantidad.detail.value;
-        console.log(this.cantidad);
+       
       }
       getCantidad(){
         return this.cantidad;
@@ -94,25 +94,25 @@ export class BocaoComponent implements OnInit {
           
       }
       
-      console.log(this.ordenes);
+      
 
   }
   setTotal(cantidad){
 
-    console.log(cantidad);
+    
     this.pick.total= this.pick.precio*cantidad
 
   }
 
   eliminarOrden(index){
 
-    console.log(index);
+    
    this.ordenes.splice(index,1);
   }
 
   confirmarOrden(){
     this.service.setOrden(this.ordenes);
-    console.log(this.service.getOrden());
+    
     this.cerrarModal();
   }
   cerrarModal() {
